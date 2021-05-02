@@ -1,3 +1,5 @@
+CXX =g++
+
 r ?=0
 ifeq (${r}, 1)
 	CXXFLAGS =-std=c++17 -MMD -o3 #release
