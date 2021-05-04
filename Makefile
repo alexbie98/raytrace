@@ -1,16 +1,17 @@
 CXX =g++
 
-r ?=1
+r ?=0
 ifeq (${r}, 1)
 	CXXFLAGS =-std=c++17 -MMD -o3 #release
 else
 	CXXFLAGS =-std=c++17 -Wall -MMD -g # debug
 endif
 
-BUILDDIR = build
+INCLUDEDIR = include
 SRCDIR = src
+BUILDDIR = build
 
-OBJECTS = ${addprefix ${BUILDDIR}/, module/Module.o Main.o}
+OBJECTS = ${addprefix ${BUILDDIR}/, Main.o Render.o geom/Intersect.o geom/Ops.o geom/Ray.o}
 DEPENDS = ${OBJECTS:.o=.d}
 
 rt: ${OBJECTS}
@@ -18,7 +19,7 @@ rt: ${OBJECTS}
 
 ${BUILDDIR}/%.o: ${SRCDIR}/%.cc
 	@mkdir -p $(@D)
-	${CXX} ${CXXFLAGS} -c -o $@ $<
+	${CXX} ${CXXFLAGS} -I${INCLUDEDIR} -c -o $@ $<
 
 -include ${DEPENDS}
 

@@ -3,7 +3,11 @@
 
 .vscode
 
+/include
 /build
 *.d
 *.o
 /rt
+/img.ppm
+
+
