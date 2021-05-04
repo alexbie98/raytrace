@@ -4,5 +4,5 @@
 ### Run
 - Tested on Apple clang version 12.0.0.
 - `$ git clone git@github.com:alexbie98/raytrace.git && cd raytrace`
-- `$ make`
+- `$ make r=1` (this will download [GLM 0.9.9.8](https://github.com/g-truc/glm)
 - `$ ./rt`

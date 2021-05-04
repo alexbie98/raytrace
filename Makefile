@@ -7,19 +7,27 @@ else
 	CXXFLAGS =-std=c++17 -Wall -MMD -g # debug
 endif
 
-INCLUDEDIR = include
 SRCDIR = src
 BUILDDIR = build
 
 OBJECTS = ${addprefix ${BUILDDIR}/, Main.o Render.o geom/Intersect.o geom/Ops.o geom/Ray.o}
 DEPENDS = ${OBJECTS:.o=.d}
 
-rt: ${OBJECTS}
+rt: include ${OBJECTS}
 	${CXX} ${CXXFLAGS_DEBUG} ${OBJECTS} -o rt
 
 ${BUILDDIR}/%.o: ${SRCDIR}/%.cc
 	@mkdir -p $(@D)
-	${CXX} ${CXXFLAGS} -I${INCLUDEDIR} -c -o $@ $<
+	${CXX} ${CXXFLAGS} -Iinclude -c -o $@ $<
+
+include:
+	@mkdir -p include
+	wget https://github.com/g-truc/glm/releases/download/0.9.9.8/glm-0.9.9.8.zip
+	unzip glm-0.9.9.8.zip
+	mv glm/glm include/
+	rm -rf glm-0.9.9.8.zip glm
+
+
 
 -include ${DEPENDS}
 
