@@ -3,6 +3,7 @@
 #include <vector>
 #include <glm/glm.hpp>
 #include "Render.h"
+#include "scene/SimpleScene.h"
 
 using namespace std;
 using namespace glm;
@@ -30,8 +31,9 @@ int main(int argc, const char * argv[]){
 
     const size_t w = 256;
     const size_t h = 256;
-
     vector<dvec3> buffer{w * h};
+
+    auto s = SimpleScene{};
 
     render(buffer, w, h);
 

@@ -10,7 +10,5 @@ dmat4 translate(const dvec3& x){
 
 dmat4 scale(const dvec3& s){
     dmat4 mat;
-
     return mat;
-
 }

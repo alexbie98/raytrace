@@ -1,3 +1,5 @@
+#pragma once
+
 #include "Node.h"
 
 class Light : public Node {
