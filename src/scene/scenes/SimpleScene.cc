@@ -1,5 +1,5 @@
 #include "SimpleScene.h"
-#include <geom/Ops.h>
+#include "geom/Ops.h"
 
 using namespace std;
 

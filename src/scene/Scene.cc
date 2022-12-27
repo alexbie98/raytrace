@@ -1,8 +1,8 @@
 #include "Scene.h"
 
-#include <primitive/Cube.h>
-#include <primitive/Sphere.h>
-#include <primitive/Triangle.h>
+#include "primitive/Cube.h"
+#include "primitive/Sphere.h"
+#include "primitive/Triangle.h"
 
 using namespace std;
 

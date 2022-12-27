@@ -3,7 +3,7 @@
 #include <vector>
 #include <glm/glm.hpp>
 #include "Render.h"
-#include "scene/SimpleScene.h"
+#include "scene/scenes/SimpleScene.h"
 
 using namespace std;
 using namespace glm;

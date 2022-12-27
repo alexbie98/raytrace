@@ -4,7 +4,7 @@
 #include <vector>
 #include <utility>
 #include <glm/glm.hpp>
-#include <primitive/Primitive.h>
+#include "primitive/Primitive.h"
 
 class Node {
     public:

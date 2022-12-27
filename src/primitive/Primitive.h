@@ -2,7 +2,7 @@
 
 #include <utility>
 #include <glm/glm.hpp>
-#include <geom/Ray.h>
+#include "geom/Ray.h"
 
 class Primitive {
     public:

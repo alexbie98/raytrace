@@ -8,7 +8,7 @@ class Scene {
         Scene(const std::string& name);
         size_t make_id();
 
-        Node* addNode(Node *parent, std::string &name);
+        Node* addNode(Node *parent, std::string& name);
         Node* addCube(Node* parent, std::string& name);
         Node* addSphere(Node* parent, std::string& name);
         Node* addMesh(Node* parent, std::string& name);

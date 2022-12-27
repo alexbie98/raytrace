@@ -10,7 +10,7 @@ endif
 SRCDIR = src
 BUILDDIR = build
 
-OBJECTS = ${addprefix ${BUILDDIR}/, Main.o Render.o geom/Intersect.o geom/Ops.o geom/Ray.o primitive/Cube.o primitive/Sphere.o primitive/Triangle.o scene/Node.o scene/Scene.o scene/SimpleScene.o}
+OBJECTS = ${addprefix ${BUILDDIR}/, Main.o Render.o geom/Intersect.o geom/Ops.o geom/Ray.o primitive/Cube.o primitive/Sphere.o primitive/Triangle.o scene/Node.o scene/Scene.o scene/scenes/SimpleScene.o}
 DEPENDS = ${OBJECTS:.o=.d}
 
 rt: include ${OBJECTS}

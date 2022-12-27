@@ -1,5 +1,5 @@
 #include "Sphere.h"
-#include <geom/Intersect.h>
+#include "geom/Intersect.h"
 
 using namespace std;
 using namespace glm;
